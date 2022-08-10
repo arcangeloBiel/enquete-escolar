@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "114936518009",
+    "firebase_url": "https://enquete-fb44a-default-rtdb.firebaseio.com",
+    "project_id": "enquete-fb44a",
+    "storage_bucket": "enquete-fb44a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114936518009:android:62db5e8eddfd5bf7e38ba8",
+        "android_client_info": {
+          "package_name": "com.example.enquete"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114936518009-mll44d4cgbd83gl4trf4h2o3pbgfqfeq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmXIEnl-r2SmlLtHCsgd1-UGy5o36LgOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "114936518009-mll44d4cgbd83gl4trf4h2o3pbgfqfeq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114936518009:android:d116a6b274885c6ce38ba8",
+        "android_client_info": {
+          "package_name": "com.exemple.enquete"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114936518009-mll44d4cgbd83gl4trf4h2o3pbgfqfeq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmXIEnl-r2SmlLtHCsgd1-UGy5o36LgOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "114936518009-mll44d4cgbd83gl4trf4h2o3pbgfqfeq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
