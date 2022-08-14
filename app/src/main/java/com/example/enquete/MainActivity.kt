@@ -14,6 +14,7 @@ import com.example.enquete.presentation.adapter.MateriaAdapter
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
+
 class MainActivity : AppCompatActivity() {
 
     private val db = Firebase.firestore
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         getMateria()
     }
 
-
+    @SuppressLint("NotifyDataSetChanged")
     fun getMateria() {
         try {
             db.collection("materia-escolar").get()
@@ -89,23 +90,31 @@ class MainActivity : AppCompatActivity() {
                             doc = "zqOqAXklMMxieoxYIMy1"
                         }
 
-                        Log.d("filtro", " ${doc}")
 
                            val washingtonRef = db.collection("materia-escolar").document(doc)
                            washingtonRef.update("voto", contador)
-                               .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully updated!") }
+                               .addOnSuccessListener {  pedidoItemAdapter.notifyDataSetChanged() }
                                .addOnFailureListener { e -> Log.w(TAG, "Error updating document", e) }
 
+                        val intent = intent
+                        finish()
+                        startActivity(intent)
 
                     }
-                    pedidoItemAdapter.notifyDataSetChanged()
 
                 } catch (e: Exception) {
                     Log.d("filtro", " ${e.message}")
 
                 }
-                
             }
         })
+    }
+
+
+
+    @SuppressLint("NotifyDataSetChanged")
+    override fun onStart() {
+        materiaAdapter.notifyDataSetChanged()
+        super.onStart()
     }
 }

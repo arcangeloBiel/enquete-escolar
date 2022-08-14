@@ -41,6 +41,7 @@ class MateriaAdapter(
 
         override fun onClick(v: View?) {
             clickListener?.onItemClick(v!!, layoutPosition)
+            notifyDataSetChanged()
         }
 
         init {
@@ -69,12 +70,6 @@ class MateriaAdapter(
         }catch(e: Exception){
             Log.d("Picking","PickingPedidoItemAdapter Error - ${e.message}")
         }
-    }
-
-    fun addVoto(position: Int) {
-        Log.d("filtro",  " position -- ${position}")
-       // dataSet.add(0, position)
-        notifyDataSetChanged()
     }
 
 
