@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.enquete.R
@@ -36,10 +35,9 @@ class MateriaAdapter(
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
 
-        val nome: TextView = itemView.findViewById(R.id.nome)
-        val voto: TextView = itemView.findViewById(R.id.votos)
-        val btnVotar: Button = itemView.findViewById(R.id.button)
-
+        val nome: TextView = itemView.findViewById(R.id.idNome)
+        val voto: TextView = itemView.findViewById(R.id.idVotos)
+        val btnVotar: Button = itemView.findViewById(R.id.idButton)
 
         override fun onClick(v: View?) {
             clickListener?.onItemClick(v!!, layoutPosition)
@@ -47,6 +45,7 @@ class MateriaAdapter(
 
         init {
             itemView.setOnClickListener(this)
+            btnVotar.setOnClickListener(this)
         }
     }
 
@@ -66,9 +65,18 @@ class MateriaAdapter(
             holder.nome.text = dataSet[position].nome
             holder.voto.text = ("Votos: ${dataSet[position].voto}")
 
+
         }catch(e: Exception){
             Log.d("Picking","PickingPedidoItemAdapter Error - ${e.message}")
         }
     }
+
+    fun addVoto(position: Int) {
+        Log.d("filtro",  " position -- ${position}")
+       // dataSet.add(0, position)
+        notifyDataSetChanged()
+    }
+
+
 
 }
